@@ -1,0 +1,98 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.tab-pane {
+  -fx-tab-min-width:120px;
+  -fx-tab-max-width:120px;
+  -fx-tab-min-height:30px;
+  -fx-tab-max-height:30px;
+}
+
+.tab {
+  -fx-font-family: "Times New Roman";
+  -fx-font-size: 18px;
+  -fx-background-color:lightblue ;
+}
+
+.tab:selected {
+    -fx-background-color:blue ;
+    -fx-font-weight: bold;
+}
+
+#dangxuat, #lblDangXuat {
+	 -fx-font-family: "Times New Roman";
+	 -fx-font-size: 16px;
+}
+
+#tendn, #lblTaiKhoan, #tenTK, #ngayBD, #gioBD, #ngayDeadline, #gioDeadline {
+	 -fx-font-family: "Times New Roman";
+	 -fx-font-size: 16px;
+	 
+}
+
+#maLop,#tenLop, #lbMaLop, #lbTenLop{
+	 -fx-font-family: "Times New Roman";
+	 -fx-font-size: 25px;
+	 -fx-font-weight: bold;
+}
+
+#dangxuat:hover, #lblDangXuat:hover {
+	-fx-text-fill: blue;
+	-fx-underline: true;
+}
+
+#iconUser:hover{
+	-fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+    -fx-scale-z: 1.2;
+}
+
+#listLop{
+	-fx-font-family: "Times New Roman";
+	-fx-font-size: 20px;
+}
+
+#tableNhom, #tableDS_SV{
+	 -fx-font-family: "Times New Roman";
+	 -fx-font-size: 20px;
+}
+
+#tableCT_De, #tableDS_Nhom, #tableDSDe, #tableDeDaDK, #tableDeConHanDK{
+	 -fx-font-family: "Times New Roman";
+	 -fx-font-size: 16px;
+}
+
+
+#tableNhom .table-column {
+  -fx-alignment: CENTER;
+}
+
+#tableDS_SV .table-column {
+  -fx-alignment: CENTER;
+}
+
+
+#tableCT_De .table-column {
+  -fx-alignment: CENTER;
+}
+
+#tableDS_Nhom .table-column {
+  -fx-alignment: CENTER;
+}
+
+
+
+
+#btnQuayve, #btnDangkynhom, #btnHoantat, #btnThemthanhvien, #btnRutnhom, #btnChitietnhom, #btnHuyDKDe, 
+#btnQuayLai, #btnDangKyDe, #btnQuayVeTC, #btnXemDSDeDaDK, #btnQuayVe, #btnThemDe, #btnChiTietDe, #cbFix,
+#btnTaoDeMoi, #btnThemDeChoMon, #btnTaoDe, #delay, #tranhchap, #tranhchapDKDe, #tranhchapNhom, #btnLuuThayDoi, #btnChinhSuaDe
+{
+	-fx-font-family: "Times New Roman";
+	 -fx-font-size: 18px;
+	 -fx-font-weight: bold;
+}
+
+.dialogThemthanhvien{
+	-fx-font-family: "Times New Roman";
+  	-fx-font-size: 18px;
+}
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" stylesheets="@sinhvien.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.themdeController">
+   <children>
+   	  <Label fx:id="tendn" layoutX="670.0" layoutY="14.0" prefHeight="17.0" prefWidth="191.0" />
+		<Label fx:id="dangxuat" layoutX="920.0" layoutY="14.0" onMouseClicked="#dangxuatClicked" text="Đăng xuất" />
+		<Line endX="800.0" layoutX="50.0" layoutY="50.0" startX="-50.0" AnchorPane.bottomAnchor="549.5" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="49.5" />
+		<ImageView fx:id="iconUser" onMouseClicked="#updateUser" fitHeight="27.0" fitWidth="38.0" layoutX="871.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@user.png" />
+			</image>
+		</ImageView>
+      <Label fx:id="maLop" layoutX="90.0" layoutY="14.0" prefHeight="29.0" prefWidth="90.0" />
+	  <Label fx:id="tenLop" layoutX="208.0" layoutY="14.0" prefHeight="29.0" prefWidth="389.0" />
+      <Label layoutX="366.0" layoutY="71.0" text="THƯ VIỆN ĐỀ" textAlignment="CENTER" AnchorPane.leftAnchor="430.0" AnchorPane.rightAnchor="430.0">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font></Label>
+      <TableView fx:id="tableDSDe" layoutX="79.0" layoutY="104.0" prefHeight="407.0" prefWidth="851.0">
+        <columns>
+          <TableColumn fx:id="maDe" prefWidth="146.0" text="Mã đề" />
+          <TableColumn fx:id="moTa" editable="false" prefWidth="696.0" text="Mô tả" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnTaoDeMoi" layoutX="357.0" layoutY="547.0" mnemonicParsing="false" onAction="#chonTaoDeMoi" prefHeight="32.0" prefWidth="159.0" text="Tạo đề mới" />
+      <Button fx:id="btnThemDeChoMon" disable="true" layoutX="557.0" layoutY="547.0" mnemonicParsing="false" onAction="#chonThemDeChoMon" prefHeight="32.0" prefWidth="168.0" text="Thêm đề cho môn" />
+      <Button fx:id="btnQuayLai" layoutX="762.0" layoutY="547.0" mnemonicParsing="false" onAction="#chonQuayLai" prefHeight="32.0" prefWidth="168.0" text="Quay lại" />
+   	  <Button fx:id="btnChinhSuaDe" disable="true" layoutX="35.0" layoutY="547.0" mnemonicParsing="false" onAction="#btnChinhSuaDeClicked" prefHeight="30.0" prefWidth="150.0" text="Chỉnh sửa"/>
+   </children>
+</AnchorPane>

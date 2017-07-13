@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" stylesheets="@sinhvien.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.suaThongTinCaNhanController">
+   <children>
+      <Label fx:id="tendn" layoutX="670.0" layoutY="14.0" prefHeight="17.0" prefWidth="191.0" />
+      <Label fx:id="dangxuat" onMouseClicked="#dangxuatClicked"  layoutX="920.0" layoutY="14.0" text="Đăng xuất" />
+      <Line endX="800.0" layoutX="50.0" layoutY="50.0" startX="-50.0" AnchorPane.bottomAnchor="549.5" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="49.5" />
+      <ImageView fx:id="iconUser" fitHeight="27.0" fitWidth="38.0" layoutX="871.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+             <Image url="@user.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="187.0" layoutY="85.0" text="Mã người dùng">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font></Label>
+      <TextField fx:id="textMaNguoiDung" editable="false" layoutX="334.0" layoutY="78.0" prefHeight="37.0" prefWidth="361.0">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font></TextField>
+      <Label layoutX="187.0" layoutY="166.0" text="Họ tên">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="184.0" layoutY="243.0" text="Mật khẩu">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="187.0" layoutY="322.0" text="Email">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="182.0" layoutY="394.0" text="Số điện thoại">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="185.0" layoutY="472.0" text="Địa chỉ">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbKhoa" layoutX="722.0" layoutY="85.0" text="Khóa" visible="false">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textHoTen" editable="false" layoutX="334.0" layoutY="159.0" prefHeight="37.0" prefWidth="361.0">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="textMatKhau" editable="false" layoutX="334.0" layoutY="236.0" prefHeight="37.0" prefWidth="361.0">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="textEmail" layoutX="334.0" layoutY="315.0" prefHeight="37.0" prefWidth="361.0">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="textSDT" layoutX="334.0" layoutY="387.0" prefHeight="37.0" prefWidth="361.0">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="textKhoa" editable="false" layoutX="783.0" layoutY="78.0" prefHeight="37.0" prefWidth="148.0" visible="false">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </TextField>
+      <TextArea fx:id="textDiaChi" layoutX="334.0" layoutY="466.0" prefHeight="37.0" prefWidth="361.0">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </TextArea>
+      <Button fx:id="btnLuuChinhSua" onMouseClicked="#btnLuuChinhSuaClicked" layoutX="535.0" layoutY="536.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="157.0" text="Lưu chỉnh sửa">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnQuayVe" layoutX="734.0" layoutY="536.0" mnemonicParsing="false" onAction="#btnQuayVeClicked" prefHeight="37.0" prefWidth="157.0" text="Quay về">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDoiMatKhau" layoutX="722.0" layoutY="236.0" mnemonicParsing="false" onAction="#btnDoiMatKhauClick" prefHeight="37.0" prefWidth="48.0" text="Đổi mật khẩu">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+         <tooltip>
+            <Tooltip text="Đổi mật khẩu">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </Tooltip>
+         </tooltip>
+      </Button>
+      <ComboBox fx:id="delay" layoutX="334.0" layoutY="536.0" prefHeight="37.0" prefWidth="157.0" value="No delay">
+      	<items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Delay" />
+          <String fx:value="No delay" />
+        </FXCollections>
+      </items>
+      </ComboBox>
+      <ComboBox fx:id="tranhchap" layoutX="80.0" layoutY="536.0" prefHeight="37.0" prefWidth="220.0" value="Unrepeatable Read">
+      	<items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Unrepeatable Read" />
+          <String fx:value="Dirty Read" />
+        </FXCollections>
+      </items>
+      </ComboBox>
+   </children>
+</AnchorPane>

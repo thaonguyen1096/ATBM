@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?scenebuilder-stylesheet application.css?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.adminAddUserController">
+   <children>
+      <Label layoutX="328.0" layoutY="80.0" text="Mã người dùng" />
+      <Label layoutX="40.0" layoutY="140.0" prefHeight="30.0" text="Họ tên" />
+      <Label layoutX="40.0" layoutY="200.0" text="Mật khẩu" />
+      <Label layoutX="40.0" layoutY="260.0" text="Email" />
+      <Label layoutX="40.0" layoutY="80.0" text="Loại người dùng" />
+      <Label layoutX="328.0" layoutY="140.0" text="Điện thoại" />
+      <Label layoutX="328.0" layoutY="200.0" text="Địa chỉ" />
+      <Label layoutX="328.0" layoutY="260.0" text="Khóa" />
+      <Button fx:id="btnOK" layoutX="439.0" layoutY="327.0" mnemonicParsing="false" onMouseClicked="#confirm" prefHeight="40.0" prefWidth="101.0" text="Xác nhận" />
+      <Button fx:id="btnBack" layoutX="291.0" layoutY="327.0" mnemonicParsing="false" onMouseClicked="#goBack" prefHeight="40.0" prefWidth="101.0" text="Hủy bỏ" />
+      <TextField fx:id="txtName" layoutX="141.0" layoutY="140.0" prefHeight="30.0" style="-fx-font-size: 12;" />
+      <TextField fx:id="txtEmail" layoutX="141.0" layoutY="254.0" prefHeight="30.0" />
+      <TextField fx:id="txtTel" layoutX="422.0" layoutY="140.0" prefHeight="30.0" />
+      <TextField fx:id="txtAdd" layoutX="422.0" layoutY="194.0" prefHeight="30.0" />
+      <TextField fx:id="txtYear" layoutX="422.0" layoutY="254.0" prefHeight="30.0" />
+      <TextField fx:id="txtID" layoutX="422.0" layoutY="74.0" prefHeight="30.0" />
+      <PasswordField fx:id="txtPass" layoutX="141.0" layoutY="194.0" prefHeight="30.0" />
+      <Label layoutX="219.0" layoutY="25.0" prefHeight="26.0" prefWidth="141.0" style="-fx-font-size: 17;" text="Thêm người dùng" />
+      <ComboBox fx:id="cmbType" layoutX="141.0" layoutY="74.0" prefHeight="30.0" prefWidth="155.0" promptText="Loại người dùng">
+      	<items>
+    		<FXCollections fx:factory="observableArrayList">
+    			<String fx:value="Admin" />
+    			<String fx:value="Giáo viên" />
+    			<String fx:value="Sinh viên" />
+    		</FXCollections>
+    	</items>
+     </ComboBox>
+     <ComboBox fx:id="delay" layoutX="141.0" layoutY="327.0" prefHeight="40.0" prefWidth="101.0" value="No delay">
+      	<items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Delay" />
+          <String fx:value="No delay" />
+        </FXCollections>
+      </items>
+      </ComboBox>
+      <ComboBox fx:id="tranhchap" layoutX="20.0" layoutY="327.0" prefHeight="40.0" prefWidth="101.0" value = "Phantom" >
+      	<items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Phantom" />
+          <String fx:value="Dirty Read" />
+        </FXCollections>
+      </items>
+      </ComboBox>
+   </children>
+</AnchorPane>

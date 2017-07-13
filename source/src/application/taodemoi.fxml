@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" stylesheets="@sinhvien.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.taodemoiController">
+   <children>
+   	 <Label fx:id="tendn" layoutX="670.0" layoutY="14.0" prefHeight="17.0" prefWidth="191.0" />
+		<Label fx:id="dangxuat" layoutX="920.0" layoutY="14.0" onMouseClicked="#dangxuatClicked" text="Đăng xuất" />
+		<Line endX="800.0" layoutX="50.0" layoutY="50.0" startX="-50.0" AnchorPane.bottomAnchor="549.5" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="49.5" />
+		<ImageView fx:id="iconUser" fitHeight="27.0" fitWidth="38.0" layoutX="871.0" layoutY="9.0" onMouseClicked="#updateUser" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@user.png" />
+			</image>
+		</ImageView>
+      <Label fx:id="maLop" layoutX="90.0" layoutY="14.0" prefHeight="29.0" prefWidth="90.0" />
+	  <Label fx:id="tenLop" layoutX="208.0" layoutY="14.0" prefHeight="29.0" prefWidth="389.0" />
+      <Label layoutX="141.0" layoutY="101.0" text="Mô tả ">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font></Label>
+      <TextArea fx:id="moTa" layoutX="141.0" layoutY="141.0" prefHeight="339.0" prefWidth="794.0" promptText="Nhập mô tả đề...">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font></TextArea>
+      <Button fx:id="btnTaoDe" layoutX="608.0" layoutY="526.0" mnemonicParsing="false" onAction="#chonTaoDe" prefHeight="32.0" prefWidth="125.0" text="Tạo đề" />
+      <Button fx:id="btnQuayLai" layoutX="810.0" layoutY="526.0" mnemonicParsing="false" onAction="#chonQuayLai" prefHeight="32.0" prefWidth="125.0" text="Quay lại" />
+   	  <ComboBox fx:id="delay" layoutX="403.0" layoutY="526.0" prefHeight="32.0" prefWidth="132.0" value="No delay">
+      	<items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Delay" />
+          <String fx:value="No delay" />
+        </FXCollections>
+      </items>
+      </ComboBox>
+      <ComboBox fx:id="tranhchap" layoutX="180.0" layoutY="526.0" prefHeight="32.0" prefWidth="170"/>
+      <Label fx:id="lbMaDe" layoutX="141.0" layoutY="66.0" text="Mã đề" visible="false">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="maDe" layoutX="208.0" layoutY="66.0" prefHeight="23.0" prefWidth="125.0">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnLuuThayDoi" layoutX="608.0" layoutY="526.0" mnemonicParsing="false" onAction="#chonLuuThayDoi" prefHeight="32.0" prefWidth="125.0" text="Lưu thay đổi" visible="flase" />
+     </children>
+</AnchorPane>

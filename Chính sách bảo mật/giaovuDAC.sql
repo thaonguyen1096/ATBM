@@ -1,0 +1,35 @@
+create role GIAOVU;
+
+grant GIAOVU to GVU01;
+grant GIAOVU to GVU02;
+grant GIAOVU to GVU03;
+grant GIAOVU to GVU04;
+grant GIAOVU to GVU05;
+
+grant insert, select on QTV.LOP to GIAOVU;
+grant select on QTV.MONHOC to GIAOVU;
+grant update(MASV, MALOP) on QTV.SINHVIEN_LOP to GIAOVU;
+grant select on QTV.SINHVIEN_LOP to GIAOVU;
+grant select on QTV.LICHDAY to GIAOVU;
+grant select, update on QTV.NGUOIDUNG to GIAOVU;
+
+--mo lop
+ CREATE OR REPLACE PROCEDURE moLop( MALOP CHAR,	HOCKY INT,	NAM INT,  GIAOVU CHAR,  TPKHOA CHAR,  SOSVTD INT,  MONHOC CHAR,  NGANH CHAR,  KHOA CHAR) 
+   AS
+   BEGIN 
+       INSERT INTO LOP VALUES (MALOP, HOCKY, NAM, GIAOVU, TPKHOA, SOSVTD, MONHOC, NGANH, KHOA);
+    END;
+/
+
+
+--them nguoi dung vao bang nguoi dung
+ CREATE OR REPLACE PROCEDURE themNguoiDungBang( MAND CHAR, HOTEN VARCHAR2, NGANH VARCHAR2, LOAIND INT) 
+   AS keyRaw raw(32);
+   BEGIN 
+      Insert into NGUOIDUNG values (MAND, HOTEN, NULL, NULL, NULL, NGANH, LOAIND);
+      IF(LOAIND = 2) THEN
+        keyRaw := DBMS_CRYPTO.RANDOMBYTES (32);
+        INSERT INTO KHOA_NGUOIDUNG VALUES(maND, UTL_RAW.BIT_XOR(keyRaw, UTL_I18N.STRING_TO_RAW(maND)));
+      END IF;
+  END themNguoiDungBang;
+/

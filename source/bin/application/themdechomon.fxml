@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" stylesheets="@sinhvien.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.themdechomonController">
+   <children>
+   	  <Label fx:id="tendn" layoutX="670.0" layoutY="14.0" prefHeight="17.0" prefWidth="191.0" />
+		<Label fx:id="dangxuat" layoutX="920.0" layoutY="14.0" onMouseClicked="#dangxuatClicked" text="Đăng xuất" />
+		<Line endX="800.0" layoutX="50.0" layoutY="50.0" startX="-50.0" AnchorPane.bottomAnchor="549.5" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="49.5" />
+		<ImageView fx:id="iconUser" fitHeight="27.0" fitWidth="38.0" layoutX="871.0" layoutY="9.0" onMouseClicked="#updateUser" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@user.png" />
+			</image>
+		</ImageView>
+      <Label fx:id="maLop" layoutX="90.0" layoutY="14.0" prefHeight="29.0" prefWidth="90.0" />
+	  <Label fx:id="tenLop" layoutX="208.0" layoutY="14.0" prefHeight="29.0" prefWidth="389.0" />
+      <Label layoutX="161.0" layoutY="138.0" text="Mã môn:">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font></Label>
+      <Label fx:id="maMon" layoutX="357.0" layoutY="138.0">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font></Label>
+      <Label fx:id="lbmd" layoutX="161.0" layoutY="87.0" text="Mã đề:" visible="false">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font></Label>
+      <Label fx:id="maDe" layoutX="357.0" layoutY="87.0">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font></Label>
+      <Label layoutX="157.0" layoutY="191.0" text="Loại đồ án:">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font></Label>
+      <ComboBox fx:id="loaiDA" layoutX="359.0" layoutY="184.0" prefHeight="37.0" prefWidth="125.0" />
+      <Label layoutX="156.0" layoutY="241.0" text="Loại đề:">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font></Label>
+      <ComboBox fx:id="loaiDe" layoutX="359.0" layoutY="241.0" prefHeight="37.0" prefWidth="125.0" />
+      <Label layoutX="152.0" layoutY="293.0" text="Số lượng đăng kí tối đa:">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font></Label>
+      <TextField fx:id="SLDKToiDa" layoutX="359.0" layoutY="293.0" prefHeight="0.0" prefWidth="125.0">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font></TextField>
+      <Label layoutX="154.0" layoutY="350.0" text="Số lượng sv/nhóm:">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font></Label>
+      <TextField fx:id="SLSVNhom" layoutX="359.0" layoutY="350.0" prefHeight="0.0" prefWidth="125.0">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font></TextField>
+      <Label layoutX="151.0" layoutY="420.0" text="Ngày bắt đầu đăng ký:">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font></Label>
+      <Label layoutX="151.0" layoutY="478.0" text="Deadline:">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font></Label>
+      <Button fx:id="btnThemDe" layoutX="427.0" layoutY="539.0" mnemonicParsing="false" onAction="#chonThemDe" prefHeight="32.0" prefWidth="125.0" text="Thêm đề" />
+      <Button fx:id="btnQuayLai" layoutX="608.0" layoutY="539.0" mnemonicParsing="false" onAction="#chonQuayLai" prefHeight="32.0" prefWidth="125.0" text="Quay lại" />
+      <JFXTimePicker fx:id="gioBD" defaultColor="#00178f" layoutX="357.0" layoutY="418.0" prefHeight="28.0" prefWidth="132.0" />
+      <JFXTimePicker fx:id="gioDeadline" defaultColor="#00058f" layoutX="357.0" layoutY="476.0" prefHeight="28.0" prefWidth="132.0" />
+      <JFXDatePicker fx:id="ngayBD" defaultColor="#00208f" layoutX="533.0" layoutY="418.0" prefHeight="28.0" prefWidth="240.0" />
+      <JFXDatePicker fx:id="ngayDeadline" defaultColor="#001a8f" layoutX="533.0" layoutY="476.0" prefHeight="28.0" prefWidth="240.0" />
+   	  
+   </children>
+</AnchorPane>
